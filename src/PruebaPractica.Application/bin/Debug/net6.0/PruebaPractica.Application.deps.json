@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PruebaPractica.Application/1.0.0": {
+        "dependencies": {
+          "PruebaPractica.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PruebaPractica.Application.dll": {}
+        }
+      },
+      "PruebaPractica.Domain/1.0.0": {
+        "runtime": {
+          "PruebaPractica.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PruebaPractica.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PruebaPractica.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
