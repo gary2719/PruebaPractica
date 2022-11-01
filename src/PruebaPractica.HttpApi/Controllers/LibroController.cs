@@ -6,32 +6,32 @@ using PruebaPractica.Domain.Controlador;
 namespace PruebaPractica.HttpApi.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class EditorialController :ControllerBase{
+public class LibroController :ControllerBase{
 
     private readonly IEditorialAppService repository;
 
-    public EditorialController(IEditorialAppService repository)
+    public LibroController(IEditorialAppService repository)
     {
         this.repository = repository;
     }
 
      [HttpGet]
-    public ICollection<EditorialDto> GetAll()
+    public ICollection<LibroDto> GetAll()
     {
 
         return editorialAppService.GetAll();
     }
 
     [HttpPost]
-    public async Task<EditorialDto> CreateAsync(EditorialCrearActualizarDto editorial)
+    public async Task<LibroDto> CreateAsync(LibroCrearActualizarDto libro)
     {
 
-        return await editorialAppService.CreateAsync(editorial);
+        return await librolAppService.CreateAsync(libro);
 
     }
 
     [HttpPut]
-    public async Task UpdateAsync(int id, EditorialCrearActualizarDto editorial)
+    public async Task UpdateAsync(int id, LibroCrearActualizarDto libro)
     {
 
         await editorialAppService.UpdateAsync(id, editorial);
@@ -39,10 +39,10 @@ public class EditorialController :ControllerBase{
     }
 
     [HttpDelete]
-    public async Task<bool> DeleteAsync(int editorialId)
+    public async Task<bool> DeleteAsync(int libroId)
     {
 
-        return await editorialAppService.DeleteAsync(editorialId);
+        return await libroAppService.DeleteAsync(libroId);
 
     }
   
